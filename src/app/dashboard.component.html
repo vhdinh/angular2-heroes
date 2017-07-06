@@ -1,0 +1,22 @@
+<hero-search></hero-search>
+<div class="container-left">
+  <h3>Top Heroes</h3>
+  <div class="grid grid-pad" (onDrop)="onTopHeroDrop($event)" droppable>
+    <div *ngFor="let hero of topHeroes" class="col-1-4" (click)="gotoDetail(hero)"  >
+      <div class="module hero" draggable [dragData]="hero">
+        <h4>{{hero.name}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-right">
+  <h3>Bottom Heroes</h3>
+  <div class="grid grid-pad" (onDrop)="onBottomHeroDrop($event)" droppable>
+    <div *ngFor="let hero of bottomHeroes" class="col-1-4" (click)="gotoDetail(hero)"  >
+      <div class="module hero" draggable [dragData]="hero">
+        <h4>{{hero.name}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

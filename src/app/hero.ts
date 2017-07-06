@@ -1,3 +1,5 @@
-/**
- * Created by vdinh on 7/5/2017.
- */
+
+export class Hero {
+  id: number;
+  name: string;
+}
